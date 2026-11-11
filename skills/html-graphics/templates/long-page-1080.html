@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>长图模板 · long-page-1080</title>
+<!--
+  用法：
+    Render-Html.ps1 -In long-page-1080.html -Out long.png -Width 1080 -FullPage -Scale 1 -Audit
+  结构：每节 1080×720 屏，竖向堆叠；总高由内容决定（本模板 4 节 = 2880）。
+  要点：
+    - 每一节自成一体（标题/图/说明），不要靠一屏的空白过渡；
+    - 长图在微信/小红书会被压缩高度，字号别小于 24px；
+    - 用 section 的 id 定位，加 -Selector "#s3" 可单独渲一节。
+-->
+<style>
+  :root{
+    --ink:#111418; --paper:#F4F1EA; --accent:#C8452F; --muted:#8A8378; --line:#DAD3C6;
+    --sans:"Source Han Sans SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    --serif:"Noto Serif SC","Source Han Serif SC",serif;
+    --pad:80px;
+  }
+  html,body{margin:0;background:#999;font-family:var(--sans)}
+  section{width:1080px;height:720px;position:relative;overflow:hidden;background:var(--paper);color:var(--ink)}
+  .num{position:absolute;left:var(--pad);top:64px;font-size:22px;letter-spacing:.3em;color:var(--accent);font-weight:700}
+  h2{position:absolute;left:var(--pad);top:150px;margin:0;font-size:82px;line-height:1.08;font-family:var(--serif);font-weight:800;letter-spacing:.01em}
+  p.body{position:absolute;left:var(--pad);top:360px;margin:0;width:620px;font-size:32px;line-height:1.7;color:#3a3a3a}
+  .note{position:absolute;left:var(--pad);bottom:64px;font-size:22px;letter-spacing:.08em;color:var(--muted)}
+  .art{position:absolute;right:0;top:0;width:380px;height:100%;background:
+      linear-gradient(160deg, rgba(200,69,47,.92), rgba(17,20,24,.95))}
+  .art.light{background:linear-gradient(160deg, #e8ddc8, #c8b79a)}
+  .dot{position:absolute;width:220px;height:220px;border-radius:50%;background:var(--paper);mix-blend-mode:overlay;right:60px;bottom:90px}
+  .quote{position:absolute;left:var(--pad);top:300px;margin:0;font-size:54px;line-height:1.35;font-family:var(--serif);max-width:680px}
+  .cols{position:absolute;left:var(--pad);right:var(--pad);top:360px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px}
+  .col h3{margin:0 0 14px;font-size:30px;color:var(--accent);letter-spacing:.04em}
+  .col p{margin:0;font-size:24px;line-height:1.65;color:#4a4a4a}
+  .cover{background:var(--ink);color:var(--paper)}
+  .cover h2{font-size:118px;top:210px;color:var(--paper)}
+  .cover .num{color:#E9B44C}
+  .cover .tag{position:absolute;left:var(--pad);bottom:96px;font-size:26px;letter-spacing:.2em;color:#B9B2A6}
+</style>
+</head>
+<body>
+
+  <section class="cover" id="s1">
+    <div class="num">01 / COVER</div>
+    <h2>从一句需求<br>到一张成品</h2>
+    <div class="tag">设计工作流的四步</div>
+  </section>
+
+  <section id="s2">
+    <div class="num">02 / DIRECTION</div>
+    <h2>风格先于画面</h2>
+    <p class="body">先定风格 DNA：网格、字体、字号阶梯、色板、母题。风格是约束系统，不是滤镜。</p>
+    <div class="art" data-audit-ignore></div>
+    <div class="dot" data-audit-ignore></div>
+    <div class="note">Style DNA · 22 个风格图鉴</div>
+  </section>
+
+  <section id="s3">
+    <div class="num">03 / MATERIAL</div>
+    <h2>素材从哪来</h2>
+    <div class="cols">
+      <div class="col"><h3>用户素材</h3><p>现成的照片、Logo、品牌资产，优先级最高。</p></div>
+      <div class="col"><h3>免费素材</h3><p>CC0 / 公有领域 / CC BY，来源与许可证一起记账。</p></div>
+      <div class="col"><h3>AI 生图</h3><p>插画与氛围图；提示词写「无文字」，文字留给排版层。</p></div>
+    </div>
+    <div class="note">Asset priority · 先素材，后自绘</div>
+  </section>
+
+  <section id="s4">
+    <div class="num">04 / DELIVERY</div>
+    <blockquote class="quote">「QA 没过的稿，<br>不许说完成。」</blockquote>
+    <div class="note">自动检查 0 error → 局部图复核 → 审美评分 → 交付</div>
+  </section>
+
+</body>
+</html>

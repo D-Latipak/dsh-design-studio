@@ -1,0 +1,376 @@
+{
+  "version": 2,
+  "note": "设计 token：颜色（hex + CMYK 两套）、字体、间距、字号。模板与 agent 都从这里取值，不要临时发明。fontPair 指向随包 OFL 字体（assets/fonts/，见 FONTS.md），HTML 用 @font-face 相对路径，ArtCraft 用 Install-UserFont.ps1。",
+  "fonts": {
+    "serif": "Noto Serif SC",
+    "sans": "Noto Sans SC",
+    "serifFallback": "Songti SC",
+    "sansFallback": "Microsoft YaHei",
+    "displayDir": "assets/fonts"
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "palettes": {
+    "ink-night": {
+      "label": "墨夜（深底 + 暖橙强调）",
+      "ink": {
+        "hex": "#0E1B2A",
+        "cmyk": {
+          "c": 90,
+          "m": 70,
+          "y": 40,
+          "k": 55
+        }
+      },
+      "paper": {
+        "hex": "#F2E8D5",
+        "cmyk": {
+          "c": 2,
+          "m": 5,
+          "y": 13,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#E2603C",
+        "cmyk": {
+          "c": 0,
+          "m": 75,
+          "y": 85,
+          "k": 0
+        }
+      },
+      "support": {
+        "hex": "#7BB51C",
+        "cmyk": {
+          "c": 55,
+          "m": 5,
+          "y": 100,
+          "k": 0
+        }
+      },
+      "fontPair": [
+        "Gloock",
+        "Noto Sans SC"
+      ]
+    },
+    "warm-paper": {
+      "label": "暖纸（浅底 + 砖红）",
+      "ink": {
+        "hex": "#2B2F36",
+        "cmyk": {
+          "c": 74,
+          "m": 64,
+          "y": 56,
+          "k": 60
+        }
+      },
+      "paper": {
+        "hex": "#F4EFE6",
+        "cmyk": {
+          "c": 3,
+          "m": 4,
+          "y": 9,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#C24B2A",
+        "cmyk": {
+          "c": 20,
+          "m": 80,
+          "y": 90,
+          "k": 10
+        }
+      },
+      "support": {
+        "hex": "#8A6E4B",
+        "cmyk": {
+          "c": 40,
+          "m": 45,
+          "y": 70,
+          "k": 25
+        }
+      },
+      "fontPair": [
+        "Instrument Serif",
+        "Work Sans"
+      ]
+    },
+    "moss": {
+      "label": "苔绿（自然/有机）",
+      "ink": {
+        "hex": "#12251C",
+        "cmyk": {
+          "c": 80,
+          "m": 50,
+          "y": 70,
+          "k": 65
+        }
+      },
+      "paper": {
+        "hex": "#F2E8D5",
+        "cmyk": {
+          "c": 2,
+          "m": 5,
+          "y": 13,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#F2C14E",
+        "cmyk": {
+          "c": 0,
+          "m": 20,
+          "y": 75,
+          "k": 0
+        }
+      },
+      "support": {
+        "hex": "#7BB51C",
+        "cmyk": {
+          "c": 55,
+          "m": 5,
+          "y": 100,
+          "k": 0
+        }
+      },
+      "fontPair": [
+        "Lora",
+        "Noto Sans SC"
+      ]
+    },
+    "electric": {
+      "label": "电光（科技/活动）",
+      "ink": {
+        "hex": "#101014",
+        "cmyk": {
+          "c": 70,
+          "m": 60,
+          "y": 50,
+          "k": 90
+        }
+      },
+      "paper": {
+        "hex": "#FFFFFF",
+        "cmyk": {
+          "c": 0,
+          "m": 0,
+          "y": 0,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#22D3EE",
+        "cmyk": {
+          "c": 75,
+          "m": 0,
+          "y": 10,
+          "k": 0
+        }
+      },
+      "support": {
+        "hex": "#2563EB",
+        "cmyk": {
+          "c": 85,
+          "m": 60,
+          "y": 0,
+          "k": 0
+        }
+      },
+      "fontPair": [
+        "Outfit",
+        "JetBrains Mono"
+      ]
+    },
+    "wine": {
+      "label": "酒红（高级/展览）",
+      "ink": {
+        "hex": "#1B0E14",
+        "cmyk": {
+          "c": 60,
+          "m": 80,
+          "y": 55,
+          "k": 80
+        }
+      },
+      "paper": {
+        "hex": "#F5EDE4",
+        "cmyk": {
+          "c": 3,
+          "m": 5,
+          "y": 10,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#8E2F3C",
+        "cmyk": {
+          "c": 25,
+          "m": 90,
+          "y": 65,
+          "k": 25
+        }
+      },
+      "support": {
+        "hex": "#C9A227",
+        "cmyk": {
+          "c": 15,
+          "m": 25,
+          "y": 90,
+          "k": 5
+        }
+      },
+      "fontPair": [
+        "Italiana",
+        "Instrument Sans"
+      ]
+    },
+    "slate": {
+      "label": "石板（克制的商务）",
+      "ink": {
+        "hex": "#1F2937",
+        "cmyk": {
+          "c": 80,
+          "m": 65,
+          "y": 50,
+          "k": 60
+        }
+      },
+      "paper": {
+        "hex": "#F3F4F6",
+        "cmyk": {
+          "c": 3,
+          "m": 2,
+          "y": 2,
+          "k": 0
+        }
+      },
+      "accent": {
+        "hex": "#F59E0B",
+        "cmyk": {
+          "c": 0,
+          "m": 35,
+          "y": 95,
+          "k": 0
+        }
+      },
+      "support": {
+        "hex": "#10B981",
+        "cmyk": {
+          "c": 70,
+          "m": 0,
+          "y": 60,
+          "k": 0
+        }
+      },
+      "fontPair": [
+        "Bricolage Grotesque",
+        "Noto Sans SC"
+      ]
+    }
+  },
+  "typeScales": {
+    "poster": {
+      "kicker": 9.5,
+      "title": 132,
+      "en": 15,
+      "deck": 10.5,
+      "info": 8.5,
+      "trackingKicker": 220,
+      "trackingTitle": 40,
+      "trackingEn": 420
+    },
+    "social": {
+      "kicker": 26,
+      "title": 240,
+      "en": 26,
+      "info": 22,
+      "trackingKicker": 280,
+      "trackingTitle": 40,
+      "trackingEn": 480
+    },
+    "card": {
+      "name": 13,
+      "role": 7.5,
+      "contact": 7,
+      "trackingName": 20,
+      "trackingRole": 80
+    }
+  },
+  "rules": {
+    "printSafeInsetMm": 3,
+    "minBodyPtPrint": 8,
+    "minBodyPxScreen": 14
+  },
+  "displayFonts": [
+    {
+      "family": "Gloock",
+      "file": "Gloock-Regular.ttf",
+      "use": "高级衬线大标题 / 展览海报"
+    },
+    {
+      "family": "Instrument Serif",
+      "file": "InstrumentSerif-Regular.ttf",
+      "use": "编辑式衬线标题"
+    },
+    {
+      "family": "Libre Baskerville",
+      "file": "LibreBaskerville-Regular.ttf",
+      "use": "书籍感正文与副标题"
+    },
+    {
+      "family": "Big Shoulders",
+      "file": "BigShoulders-Bold.ttf",
+      "use": "窄体巨型标题 / 体育与活动"
+    },
+    {
+      "family": "Bricolage Grotesque",
+      "file": "BricolageGrotesque-Bold.ttf",
+      "use": "当代无衬线标题"
+    },
+    {
+      "family": "Outfit",
+      "file": "Outfit-Regular.ttf",
+      "use": "几何无衬线 / 科技与产品"
+    },
+    {
+      "family": "Boldonse",
+      "file": "Boldonse-Regular.ttf",
+      "use": "超粗展示字 / 潮流海报"
+    },
+    {
+      "family": "Italiana",
+      "file": "Italiana-Regular.ttf",
+      "use": "时装与美容的优雅标题"
+    },
+    {
+      "family": "Silkscreen",
+      "file": "Silkscreen-Regular.ttf",
+      "use": "像素风 / Y2K"
+    },
+    {
+      "family": "Tektur",
+      "file": "Tektur-Regular.ttf",
+      "use": "机械/赛博风标题"
+    },
+    {
+      "family": "JetBrains Mono",
+      "file": "JetBrainsMono-Regular.ttf",
+      "use": "等宽小标签 / 数据"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "file": "IBMPlexMono-Regular.ttf",
+      "use": "技术说明 / 编号"
+    }
+  ]
+}

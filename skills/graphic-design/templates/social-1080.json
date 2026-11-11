@@ -1,0 +1,36 @@
+{
+  "id": "social-1080",
+  "name": "社媒方图 · 1080×1080（照片满版 + 底部文字区）",
+  "when": "小红书/朋友圈/IG 方图：插画或照片满版，标题压在下半部",
+  "format": { "width": 1080, "height": 1080, "units": "pixels", "intent": "web", "margins": 0 },
+  "palette": "ink-night",
+  "mode": "rgb",
+  "slots": {
+    "photo": { "type": "image", "required": true, "hint": "designs/assets/xxx.jpg（1024² 起）" },
+    "kicker": { "default": "墨山 · 秋季影展", "hint": "页眉，1 行" },
+    "title": { "default": "标题", "hint": "2–4 字" },
+    "en": { "default": "ENGLISH TITLE" },
+    "info": { "default": "2026.11.08 – 12.20 · 西岸美术馆 B1" }
+  },
+  "ops": [
+    { "as": "photo", "cmd": "file.place", "params": { "path": "{{photo}}", "x": -2, "y": -2, "width": 1084 } },
+    { "as": "topscrim", "cmd": "frame.create", "params": { "rect": [-2, -2, 1082, 260], "content": "graphic" } },
+    { "cmd": "object.gradient", "params": { "kind": "linear", "stops": [{ "location": 0, "swatch": "Ink", "opacity": 55 }, { "location": 100, "swatch": "Ink", "opacity": 0 }], "from": [-2, -2], "to": [-2, 260], "target": "fill", "ids": ["{{#topscrim.id}}"] } },
+    { "as": "grad", "cmd": "frame.create", "params": { "rect": [-2, 520, 1082, 1085], "content": "graphic" } },
+    { "cmd": "object.gradient", "params": { "kind": "linear", "stops": [{ "location": 0, "swatch": "Ink", "opacity": 0 }, { "location": 55, "swatch": "Ink", "opacity": 45 }, { "location": 100, "swatch": "Ink", "opacity": 100 }], "from": [-2, 520], "to": [-2, 1085], "target": "fill", "ids": ["{{#grad.id}}"] } },
+    { "as": "panel", "cmd": "frame.create", "params": { "rect": [-2, 940, 1082, 1085], "content": "graphic" } },
+    { "cmd": "object.fill", "params": { "swatch": "Ink", "ids": ["{{#panel.id}}"] } },
+    { "as": "kicker", "cmd": "frame.create", "params": { "rect": [80, 96, 700, 130], "content": "text", "text": "{{kicker}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#kicker.id}}", "point": [100, 110] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.sans}}", "size": 26, "tracking": 280, "fill": "Paper" } } },
+    { "as": "title", "cmd": "frame.create", "params": { "rect": [80, 520, 800, 900], "content": "text", "text": "{{title}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#title.id}}", "point": [200, 700] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.serif}}", "size": 240, "tracking": 40, "fill": "Paper" } } },
+    { "as": "en", "cmd": "frame.create", "params": { "rect": [80, 920, 700, 960], "content": "text", "text": "{{en}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#en.id}}", "point": [100, 935] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.sans}}", "size": 26, "tracking": 480, "fill": "Accent" } } },
+    { "as": "info", "cmd": "frame.create", "params": { "rect": [80, 986, 940, 1032], "content": "text", "text": "{{info}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#info.id}}", "point": [100, 1000] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.sans}}", "size": 22, "tracking": 120, "fill": "Paper" } } }
+  ]
+}

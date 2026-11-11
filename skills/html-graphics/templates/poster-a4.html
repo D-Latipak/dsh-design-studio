@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>A4 海报模板 · poster-a4</title>
+<!--
+  用法
+    1) 改 :root 的色板与字号（取自 ../templates/design-tokens.json 的一套 palette）
+    2) 换文案；有照片就把 <img> 的 src 指向 designs/<slug>/ 里的图
+    3) 渲染：Render-Html.ps1 -In poster-a4.html -Out poster.png -Width 210 -Height 297 -Unit mm -Dpi 300 -Audit
+  画布 794 × 1123 CSS px = A4 @96dpi；300dpi 输出 2481×3509。
+  页内边距 56px ≈ 15mm；印刷安全区另留 3mm，重要文字别贴边。
+-->
+<style>
+  :root{
+    --ink:#0E1B2A; --paper:#F2E8D5; --accent:#E2603C; --support:#7BB51C;
+    --serif:"Noto Serif SC","Source Han Serif SC","SimSun",serif;
+    --sans:"Source Han Sans SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    --pad:56px;
+    --title:118px; --deck:30px; --kicker:13px; --info:16px;
+  }
+  html,body{margin:0;padding:0;background:#888}
+  .page{
+    width:794px;height:1123px;position:relative;overflow:hidden;
+    background:var(--paper);color:var(--ink);font-family:var(--sans);
+  }
+  /* 视觉底：图片满版 + 渐变压暗，保证文字可读 */
+  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.02)}
+  .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,27,42,.05) 0%,rgba(14,27,42,.15) 45%,rgba(14,27,42,.82) 100%)}
+  /* 纯色底版本（没照片时把 .photo/.scrim 删掉，用这个） */
+  .field{position:absolute;inset:0;background:
+      radial-gradient(120% 80% at 78% 8%, #f7e7c6 0%, rgba(247,231,198,0) 55%),
+      var(--ink)}
+  .kicker{position:absolute;left:var(--pad);top:var(--pad);font-size:var(--kicker);
+    letter-spacing:.42em;text-transform:uppercase;color:var(--paper);opacity:.72;font-weight:600}
+  .title{position:absolute;left:var(--pad);bottom:352px;margin:0;font-size:var(--title);line-height:.98;
+    letter-spacing:.02em;font-weight:800;font-family:var(--serif);color:var(--paper)}
+  .deck{position:absolute;left:var(--pad);bottom:246px;max-width:520px;margin:0;font-size:var(--deck);
+    line-height:1.5;color:var(--paper);opacity:.86}
+  .rule{position:absolute;left:var(--pad);bottom:196px;width:120px;height:4px;background:var(--accent)}
+  .info{position:absolute;left:var(--pad);bottom:var(--pad);font-size:var(--info);line-height:1.9;
+    letter-spacing:.08em;color:var(--paper);opacity:.9}
+  .seal{position:absolute;right:var(--pad);top:var(--pad);width:64px;height:64px;border:2px solid var(--accent);
+    display:grid;place-items:center;color:var(--accent);font-family:var(--serif);font-size:26px;transform:rotate(-3deg)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="field" data-audit-ignore></div>
+  <!-- 有照片时取消下面注释，并把 field 删掉 -->
+  <!-- <img class="photo" src="../../assets/your-photo.jpg" alt=""> <div class="scrim" data-audit-ignore></div> -->
+
+  <div class="kicker">Fall Exhibition 2026</div>
+  <div class="seal">山</div>
+  <h1 class="title">静默<br>生长</h1>
+  <p class="deck">一场关于缓慢、材料与时间的秋季特展。</p>
+  <div class="rule" data-audit-ignore></div>
+  <div class="info">2026.09.12 — 11.30<br>西岸美术馆 B1 · 10:00–18:00</div>
+</div>
+</body>
+</html>

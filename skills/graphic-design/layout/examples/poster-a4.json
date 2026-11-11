@@ -1,0 +1,94 @@
+{
+  "title": "人是功能的剩余 · A4 版式样例",
+  "mode": "print",
+  "intent": "print",
+  "palette": "ink-night",
+  "page": {
+    "preset": "A4",
+    "bleed": 8.5,
+    "margins": { "top": 68, "bottom": 68, "left": 68, "right": 68 },
+    "columns": 12,
+    "gutter": 12
+  },
+  "blocks": [
+    {
+      "id": "bg",
+      "kind": "rect",
+      "box": { "full": true },
+      "fill": "ink"
+    },
+    {
+      "id": "rule-top",
+      "kind": "rect",
+      "box": { "col": 0, "span": 12, "y": 68, "h": 2 },
+      "fill": "accent"
+    },
+    {
+      "id": "kicker",
+      "kind": "text",
+      "box": { "col": 0, "span": 8, "y": 88 },
+      "text": "技术加速主义 / 后劳动时代 / 一次概念澄清",
+      "size": "caption",
+      "font": "sans",
+      "tracking": 320,
+      "color": "paper"
+    },
+    {
+      "id": "title",
+      "kind": "text",
+      "box": { "col": 0, "span": 10, "y": 150 },
+      "text": "人是功能的\n剩余",
+      "size": 96,
+      "font": "serif",
+      "leading": 0.98,
+      "tracking": 20,
+      "color": "paper"
+    },
+    {
+      "id": "deck",
+      "kind": "text",
+      "box": { "col": 0, "span": 7, "y": 470 },
+      "text": "在“人将被机器取代”的焦虑背后，答案不是回到某个固定本质，而是把人重新定位为功能的剩余。",
+      "size": "lead",
+      "font": "sans",
+      "leading": 1.7,
+      "color": "paper",
+      "opacity": 0.82
+    },
+    {
+      "id": "info-stack",
+      "kind": "stack",
+      "box": { "col": 0, "span": 5, "anchor": "bottom", "h": 96 },
+      "gap": 10,
+      "children": [
+        {
+          "id": "info-rule",
+          "kind": "rect",
+          "box": { "w": 64, "h": 1 },
+          "fill": "accent"
+        },
+        {
+          "id": "info",
+          "kind": "text",
+          "text": "2026.11.08 — 12.20\n沙田 · 城门河畔 B1\n10:00 — 18:00",
+          "size": "caption",
+          "font": "sans",
+          "leading": 1.9,
+          "color": "paper"
+        }
+      ]
+    },
+    {
+      "id": "side",
+      "kind": "text",
+      "box": { "col": 10, "span": 2, "y": 150, "h": 360 },
+      "text": "I\nN\nK\n\nM\nO\nU\nN\nT\nA\nI\nN\nS",
+      "size": "caption",
+      "font": "sans",
+      "leading": 1.55,
+      "tracking": 200,
+      "color": "accent",
+      "align": "right"
+    }
+  ]
+}

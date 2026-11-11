@@ -1,0 +1,434 @@
+{
+    "name":  "image-prompt-templates",
+    "kind":  "vendored prompt-template library (Markdown)",
+    "upstream":  {
+                     "repo":  "https://github.com/ConardLi/garden-skills",
+                     "skill":  "skills/gpt-image-2",
+                     "ref":  "main",
+                     "commit":  "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+                     "license":  "MIT (see LICENSE-garden-skills.txt)",
+                     "vendored_at":  "2026-11-06"
+                 },
+    "root_docs":  [
+                      "prompt-writing.md"
+                  ],
+    "categories":  {
+                       "academic-figures":  [
+                                                {
+                                                    "file":  "graphical-abstract.md",
+                                                    "bytes":  10415
+                                                },
+                                                {
+                                                    "file":  "mechanism-diagram.md",
+                                                    "bytes":  11533
+                                                },
+                                                {
+                                                    "file":  "method-pipeline-overview.md",
+                                                    "bytes":  12888
+                                                },
+                                                {
+                                                    "file":  "multi-condition-comparison.md",
+                                                    "bytes":  11070
+                                                },
+                                                {
+                                                    "file":  "neural-network-architecture.md",
+                                                    "bytes":  9852
+                                                },
+                                                {
+                                                    "file":  "publication-chart.md",
+                                                    "bytes":  11594
+                                                },
+                                                {
+                                                    "file":  "qualitative-comparison-grid.md",
+                                                    "bytes":  9664
+                                                },
+                                                {
+                                                    "file":  "research-overview-poster.md",
+                                                    "bytes":  11741
+                                                },
+                                                {
+                                                    "file":  "scientific-schematic.md",
+                                                    "bytes":  11136
+                                                }
+                                            ],
+                       "assets-and-props":  [
+                                                {
+                                                    "file":  "game-screenshot-mockup.md",
+                                                    "bytes":  5914
+                                                },
+                                                {
+                                                    "file":  "retro-skeuomorphic-icons.md",
+                                                    "bytes":  5453
+                                                }
+                                            ],
+                       "avatars-and-profile":  [
+                                                   {
+                                                       "file":  "character-grid-portrait.md",
+                                                       "bytes":  6682
+                                                   },
+                                                   {
+                                                       "file":  "cultural-portrait-series.md",
+                                                       "bytes":  5449
+                                                   },
+                                                   {
+                                                       "file":  "sticker-set.md",
+                                                       "bytes":  5406
+                                                   },
+                                                   {
+                                                       "file":  "style-transfer-selfie.md",
+                                                       "bytes":  5194
+                                                   },
+                                                   {
+                                                       "file":  "themed-3d-icon.md",
+                                                       "bytes":  5122
+                                                   }
+                                               ],
+                       "branding-and-packaging":  [
+                                                      {
+                                                          "file":  "beverage-label-design.md",
+                                                          "bytes":  5226
+                                                      },
+                                                      {
+                                                          "file":  "brand-identity-board.md",
+                                                          "bytes":  5806
+                                                      },
+                                                      {
+                                                          "file":  "character-merch-board.md",
+                                                          "bytes":  15100
+                                                      },
+                                                      {
+                                                          "file":  "cosmetic-packaging.md",
+                                                          "bytes":  5310
+                                                      },
+                                                      {
+                                                          "file":  "full-mascot-brand-doc.md",
+                                                          "bytes":  13304
+                                                      },
+                                                      {
+                                                          "file":  "mascot-brand-kit.md",
+                                                          "bytes":  5593
+                                                      }
+                                                  ],
+                       "editing-workflows":  [
+                                                 {
+                                                     "file":  "background-replacement.md",
+                                                     "bytes":  3712
+                                                 },
+                                                 {
+                                                     "file":  "local-object-replacement.md",
+                                                     "bytes":  3427
+                                                 },
+                                                 {
+                                                     "file":  "object-removal.md",
+                                                     "bytes":  2896
+                                                 },
+                                                 {
+                                                     "file":  "portrait-local-edit.md",
+                                                     "bytes":  3436
+                                                 },
+                                                 {
+                                                     "file":  "product-retouching.md",
+                                                     "bytes":  3300
+                                                 }
+                                             ],
+                       "grids-and-collages":  [
+                                                  {
+                                                      "file":  "ad-banner-multi-grid.md",
+                                                      "bytes":  10811
+                                                  },
+                                                  {
+                                                      "file":  "anime-pitch-board.md",
+                                                      "bytes":  5809
+                                                  },
+                                                  {
+                                                      "file":  "banner-grid-2x2.md",
+                                                      "bytes":  5779
+                                                  },
+                                                  {
+                                                      "file":  "lookbook-grid.md",
+                                                      "bytes":  5563
+                                                  },
+                                                  {
+                                                      "file":  "mixed-style-multi-panel.md",
+                                                      "bytes":  5762
+                                                  }
+                                              ],
+                       "infographics":  [
+                                            {
+                                                "file":  "bento-grid-infographic.md",
+                                                "bytes":  8581
+                                            },
+                                            {
+                                                "file":  "comparison-infographic.md",
+                                                "bytes":  7619
+                                            },
+                                            {
+                                                "file":  "hand-drawn-infographic.md",
+                                                "bytes":  8322
+                                            },
+                                            {
+                                                "file":  "kpi-dashboard-infographic.md",
+                                                "bytes":  9048
+                                            },
+                                            {
+                                                "file":  "legend-heavy-infographic.md",
+                                                "bytes":  6713
+                                            },
+                                            {
+                                                "file":  "step-by-step-infographic.md",
+                                                "bytes":  8151
+                                            }
+                                        ],
+                       "maps":  [
+                                    {
+                                        "file":  "food-map.md",
+                                        "bytes":  7140
+                                    },
+                                    {
+                                        "file":  "illustrated-city-map.md",
+                                        "bytes":  5029
+                                    },
+                                    {
+                                        "file":  "itinerary-day-trip-map.md",
+                                        "bytes":  13874
+                                    },
+                                    {
+                                        "file":  "store-distribution-map.md",
+                                        "bytes":  5549
+                                    },
+                                    {
+                                        "file":  "travel-route-map.md",
+                                        "bytes":  5933
+                                    }
+                                ],
+                       "portraits-and-characters":  [
+                                                        {
+                                                            "file":  "character-sheet.md",
+                                                            "bytes":  5480
+                                                        },
+                                                        {
+                                                            "file":  "founder-portrait.md",
+                                                            "bytes":  5102
+                                                        },
+                                                        {
+                                                            "file":  "pose-reference-sheet.md",
+                                                            "bytes":  12743
+                                                        },
+                                                        {
+                                                            "file":  "professional-portrait.md",
+                                                            "bytes":  4733
+                                                        },
+                                                        {
+                                                            "file":  "virtual-host.md",
+                                                            "bytes":  5006
+                                                        }
+                                                    ],
+                       "poster-and-campaigns":  [
+                                                    {
+                                                        "file":  "banner-hero.md",
+                                                        "bytes":  4756
+                                                    },
+                                                    {
+                                                        "file":  "biomimetic-concept-poster.md",
+                                                        "bytes":  11323
+                                                    },
+                                                    {
+                                                        "file":  "brand-poster.md",
+                                                        "bytes":  4502
+                                                    },
+                                                    {
+                                                        "file":  "campaign-kv.md",
+                                                        "bytes":  4932
+                                                    },
+                                                    {
+                                                        "file":  "character-catalog-poster.md",
+                                                        "bytes":  13349
+                                                    },
+                                                    {
+                                                        "file":  "editorial-cover.md",
+                                                        "bytes":  5241
+                                                    },
+                                                    {
+                                                        "file":  "lineup-comparison-poster.md",
+                                                        "bytes":  12319
+                                                    },
+                                                    {
+                                                        "file":  "vintage-editorial-infographic.md",
+                                                        "bytes":  12978
+                                                    }
+                                                ],
+                       "product-visuals":  [
+                                               {
+                                                   "file":  "ecommerce-marketing-board.md",
+                                                   "bytes":  14111
+                                               },
+                                               {
+                                                   "file":  "exploded-view-poster.md",
+                                                   "bytes":  8041
+                                               },
+                                               {
+                                                   "file":  "lifestyle-product-scene.md",
+                                                   "bytes":  7331
+                                               },
+                                               {
+                                                   "file":  "packaging-showcase.md",
+                                                   "bytes":  7209
+                                               },
+                                               {
+                                                   "file":  "premium-studio-product.md",
+                                                   "bytes":  6896
+                                               },
+                                               {
+                                                   "file":  "white-background-product.md",
+                                                   "bytes":  5876
+                                               }
+                                           ],
+                       "scenes-and-illustrations":  [
+                                                        {
+                                                            "file":  "concept-scene.md",
+                                                            "bytes":  4570
+                                                        },
+                                                        {
+                                                            "file":  "healing-scene.md",
+                                                            "bytes":  4511
+                                                        },
+                                                        {
+                                                            "file":  "minimalist-mood-scene.md",
+                                                            "bytes":  4428
+                                                        },
+                                                        {
+                                                            "file":  "picture-book-scene.md",
+                                                            "bytes":  4531
+                                                        }
+                                                    ],
+                       "slides-and-visual-docs":  [
+                                                      {
+                                                          "file":  "dense-explainer-slides.md",
+                                                          "bytes":  5597
+                                                      },
+                                                      {
+                                                          "file":  "educational-diagram-slide.md",
+                                                          "bytes":  5238
+                                                      },
+                                                      {
+                                                          "file":  "policy-style-slide.md",
+                                                          "bytes":  5845
+                                                      },
+                                                      {
+                                                          "file":  "visual-report-page.md",
+                                                          "bytes":  5982
+                                                      }
+                                                  ],
+                       "storyboards-and-sequences":  [
+                                                         {
+                                                             "file":  "anime-key-visual.md",
+                                                             "bytes":  4809
+                                                         },
+                                                         {
+                                                             "file":  "character-relationship-diagram.md",
+                                                             "bytes":  5773
+                                                         },
+                                                         {
+                                                             "file":  "cinematic-storyboard-grid.md",
+                                                             "bytes":  11912
+                                                         },
+                                                         {
+                                                             "file":  "four-panel-comic.md",
+                                                             "bytes":  5842
+                                                         },
+                                                         {
+                                                             "file":  "manga-spread-page.md",
+                                                             "bytes":  5819
+                                                         },
+                                                         {
+                                                             "file":  "process-photo-board.md",
+                                                             "bytes":  14365
+                                                         },
+                                                         {
+                                                             "file":  "product-tvc-storyboard.md",
+                                                             "bytes":  11306
+                                                         },
+                                                         {
+                                                             "file":  "recipe-process-flowchart.md",
+                                                             "bytes":  5805
+                                                         }
+                                                     ],
+                       "technical-diagrams":  [
+                                                  {
+                                                      "file":  "er-diagram.md",
+                                                      "bytes":  11000
+                                                  },
+                                                  {
+                                                      "file":  "flowchart-decision.md",
+                                                      "bytes":  10158
+                                                  },
+                                                  {
+                                                      "file":  "mind-map-tech.md",
+                                                      "bytes":  9889
+                                                  },
+                                                  {
+                                                      "file":  "network-topology.md",
+                                                      "bytes":  11430
+                                                  },
+                                                  {
+                                                      "file":  "sequence-diagram.md",
+                                                      "bytes":  10805
+                                                  },
+                                                  {
+                                                      "file":  "state-machine.md",
+                                                      "bytes":  10134
+                                                  },
+                                                  {
+                                                      "file":  "system-architecture.md",
+                                                      "bytes":  11788
+                                                  }
+                                              ],
+                       "typography-and-text-layout":  [
+                                                          {
+                                                              "file":  "bilingual-layout-visual.md",
+                                                              "bytes":  5549
+                                                          },
+                                                          {
+                                                              "file":  "title-safe-poster.md",
+                                                              "bytes":  4766
+                                                          }
+                                                      ],
+                       "ui-mockups":  [
+                                          {
+                                              "file":  "chat-interface-scene.md",
+                                              "bytes":  9044
+                                          },
+                                          {
+                                              "file":  "landing-page-case-study.md",
+                                              "bytes":  12686
+                                          },
+                                          {
+                                              "file":  "live-commerce-ui.md",
+                                              "bytes":  8688
+                                          },
+                                          {
+                                              "file":  "product-card-overlay.md",
+                                              "bytes":  8502
+                                          },
+                                          {
+                                              "file":  "short-video-cover-ui.md",
+                                              "bytes":  7545
+                                          },
+                                          {
+                                              "file":  "social-interface-mockup.md",
+                                              "bytes":  9366
+                                          }
+                                      ]
+                   },
+    "counts":  {
+                   "categories":  17,
+                   "templates":  93,
+                   "bytes":  725517
+               },
+    "usage":  {
+                  "index":  "this file; category -\u003e trigger table also lives in ../image-prompt-recipes.md",
+                  "rule":  "read the index/table first, then open exactly ONE template file for the current job; never load a whole category",
+                  "text_policy":  "all rendered text is produced by the layout layer; image models get \"no typography\" prompts",
+                  "adaptation":  "rewrite gpt-image-2 structured prompts into short z-image-turbo prompts (see ../image-prompt-recipes.md)"
+              }
+}

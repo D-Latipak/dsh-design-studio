@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>界面稿模板 · ui-mock-1440</title>
+<!--
+  用法：
+    Render-Html.ps1 -In ui-mock-1440.html -Out ui.png -Width 1440 -Height 900 -Scale 2 -Audit
+  用途：提案里的界面截图、产品页、看板/仪表盘示意、App 信息架构图。
+  注意：这是「界面外观稿」，不做交互；要可点的原型请用真实前端。
+-->
+<style>
+  :root{
+    --bg:#0F1216; --panel:#161B22; --line:#242B35; --text:#E6E9EF; --muted:#8B95A5;
+    --accent:#4C8DFF; --ok:#3FB950; --warn:#D29922; --bad:#F85149;
+    --sans:"Source Han Sans SC","Noto Sans SC","Inter","Microsoft YaHei",sans-serif;
+  }
+  html,body{margin:0;background:#000;font-family:var(--sans);color:var(--text)}
+  .app{width:1440px;height:900px;display:grid;grid-template-columns:232px 1fr;background:var(--bg)}
+  .side{border-right:1px solid var(--line);padding:28px 20px;background:var(--panel)}
+  .brand{font-size:18px;font-weight:700;letter-spacing:.02em;margin-bottom:34px}
+  .nav{display:flex;flex-direction:column;gap:6px}
+  .nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:var(--muted);
+    text-decoration:none;font-size:14px}
+  .nav a.on{background:rgba(76,141,255,.14);color:var(--text)}
+  .dot{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.7}
+  .main{padding:32px 40px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px}
+  .head h1{margin:0;font-size:30px;letter-spacing:.01em}
+  .head p{margin:6px 0 0;color:var(--muted);font-size:14px}
+  .btn{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:14px}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:26px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .kpi span{display:block;color:var(--muted);font-size:13px;margin-bottom:10px}
+  .kpi strong{font-size:30px;font-weight:700;letter-spacing:-.01em}
+  .kpi em{font-style:normal;font-size:13px;color:var(--ok);margin-left:8px}
+  .panels{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .card h2{margin:0 0 18px;font-size:16px;font-weight:600}
+  .bars{display:flex;align-items:flex-end;gap:14px;height:220px}
+  .bars i{display:block;flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--accent),rgba(76,141,255,.25))}
+  .rows{display:flex;flex-direction:column;gap:14px}
+  .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+  .row b{color:var(--text);font-weight:600}
+  .legend{display:flex;gap:18px;margin-top:18px;font-size:13px;color:var(--muted)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">Design Ops</div>
+    <nav class="nav">
+      <a class="on" href="#"><span class="dot"></span>总览</a>
+      <a href="#"><span class="dot"></span>项目</a>
+      <a href="#"><span class="dot"></span>素材库</a>
+      <a href="#"><span class="dot"></span>交付记录</a>
+      <a href="#"><span class="dot"></span>设置</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="head">
+      <div><h1>本周设计交付</h1><p>2026.11.02 — 11.06 · 全部项目</p></div>
+      <button class="btn">导出周报</button>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span>交付件</span><strong>18</strong><em>+4</em></div>
+      <div class="kpi"><span>一次通过率</span><strong>83%</strong><em>+6%</em></div>
+      <div class="kpi"><span>平均改稿轮次</span><strong>1.2</strong><em>−0.3</em></div>
+      <div class="kpi"><span>印刷返工</span><strong>0</strong></div>
+    </div>
+    <div class="panels">
+      <section class="card">
+        <h2>日交付量</h2>
+        <div class="bars" data-audit-ignore>
+          <i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i>
+          <i style="height:72%"></i><i style="height:88%"></i><i style="height:64%"></i><i style="height:50%"></i>
+        </div>
+        <div class="legend"><span><i style="background:var(--accent)"></i>全部</span>
+          <span><i style="background:var(--ok)"></i>印刷</span>
+          <span><i style="background:var(--warn)"></i>社媒</span></div>
+      </section>
+      <section class="card">
+        <h2>按类型</h2>
+        <div class="rows">
+          <div class="row"><span>海报</span><b>7</b></div>
+          <div class="row"><span>社媒图</span><b>6</b></div>
+          <div class="row"><span>长图</span><b>3</b></div>
+          <div class="row"><span>名片 / 其他</span><b>2</b></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

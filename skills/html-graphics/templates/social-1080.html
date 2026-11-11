@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>社媒方图模板 · social-1080</title>
+<!--
+  用法：
+    Render-Html.ps1 -In social-1080.html -Out social.png -Width 1080 -Height 1350 -Scale 1 -Audit
+  尺寸：1080×1350（小红书 3:4）。改 .page 的宽高即可支持 1080×1080 / 1080×1920。
+  平台安全区：底部 220px 内不要放关键信息（小红书会压标签）；右侧 120px 留白。
+-->
+<style>
+  :root{
+    --ink:#1B0E14; --paper:#F5EDE4; --accent:#8E2F3C; --gold:#C9A227;
+    --serif:"Noto Serif SC","Source Han Serif SC",serif;
+    --sans:"Source Han Sans SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    --pad:88px;
+  }
+  html,body{margin:0;background:#222}
+  .page{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--paper);color:var(--ink)}
+  .band{position:absolute;left:0;top:0;width:100%;height:44%;background:var(--ink)}
+  .glow{position:absolute;left:-12%;top:-18%;width:70%;height:55%;background:
+     radial-gradient(50% 50% at 50% 50%, rgba(201,162,39,.55), rgba(201,162,39,0) 70%)}
+  .kicker{position:absolute;left:var(--pad);top:72px;font-size:26px;letter-spacing:.34em;
+    color:var(--gold);text-transform:uppercase;font-weight:700}
+  .title{position:absolute;left:var(--pad);top:236px;margin:0;font-size:150px;line-height:1.02;
+    font-family:var(--serif);font-weight:800;color:var(--paper);letter-spacing:.02em}
+  .sub{position:absolute;left:var(--pad);top:calc(44% + 56px);right:var(--pad);margin:0;
+    font-size:40px;line-height:1.6;color:var(--ink);font-weight:600}
+  .cta{position:absolute;left:var(--pad);bottom:150px;display:inline-flex;align-items:center;gap:18px;
+    padding:22px 38px;background:var(--accent);color:var(--paper);font-size:32px;letter-spacing:.06em}
+  .meta{position:absolute;right:var(--pad);bottom:150px;text-align:right;font-size:24px;line-height:1.9;color:#6a5b52}
+  .bar{position:absolute;left:var(--pad);top:calc(44% - 6px);width:160px;height:6px;background:var(--gold)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band" data-audit-ignore></div>
+  <div class="glow" data-audit-ignore></div>
+  <div class="kicker">Coffee · New Store</div>
+  <h1 class="title">一杯<br>见山</h1>
+  <div class="bar" data-audit-ignore></div>
+  <p class="sub">新店开张，首杯半价。<br>山里来的豆子，城里的做法。</p>
+  <div class="cta">9.20 开业 · 首杯半价</div>
+  <div class="meta">望山咖啡<br>建国西路 21 号<br>07:30–20:00</div>
+</div>
+</body>
+</html>

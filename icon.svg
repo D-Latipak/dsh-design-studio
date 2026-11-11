@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Design Studio">
+  <rect width="96" height="96" rx="20" fill="#2b2f36"/>
+  <rect x="18" y="12" width="60" height="72" rx="3" fill="#f4efe6"/>
+  <circle cx="48" cy="34" r="11" fill="#e2603c"/>
+  <rect x="26" y="52" width="44" height="4" rx="2" fill="#2b2f36"/>
+  <rect x="26" y="61" width="30" height="4" rx="2" fill="#7bb51c"/>
+  <rect x="26" y="70" width="38" height="4" rx="2" fill="#9aa0a8"/>
+  <path d="M18 78 L42 52 L56 66 L66 56 L78 70 L78 84 L18 84 Z" fill="#7bb51c" opacity="0.18"/>
+  <rect x="12" y="20" width="6" height="6" fill="#7bb51c"/>
+  <rect x="78" y="20" width="6" height="6" fill="#7bb51c"/>
+  <rect x="12" y="70" width="6" height="6" fill="#e2603c"/>
+  <rect x="78" y="70" width="6" height="6" fill="#e2603c"/>
+</svg>

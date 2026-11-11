@@ -1,0 +1,30 @@
+{
+  "id": "card-90x54",
+  "name": "名片 · 90×54mm（深底 + 左信息 + 右侧色块）",
+  "when": "名片/工牌：一张 90×54mm，深色底，左侧姓名与联系，右侧方形标记",
+  "format": { "width": 255.12, "height": 153.07, "units": "points", "intent": "print", "bleed": 8.5, "margins": 0 },
+  "palette": "slate",
+  "mode": "cmyk",
+  "slots": {
+    "name": { "default": "林 一", "hint": "姓名，≤ 4 字" },
+    "role": { "default": "设计总监 / DESIGN DIRECTOR" },
+    "contact": { "default": "+86 138 0000 0000\nhello@example.com\n上海 · 徐汇区", "hint": "联系信息，最多 3 行" }
+  },
+  "ops": [
+    { "as": "bg", "cmd": "frame.create", "params": { "rect": [-8.5, -8.5, 263.62, 161.57], "content": "graphic" } },
+    { "cmd": "object.fill", "params": { "swatch": "Ink", "ids": ["{{#bg.id}}"] } },
+    { "as": "mark", "cmd": "frame.create", "params": { "rect": [196, 30, 232, 66], "content": "graphic" } },
+    { "cmd": "object.fill", "params": { "swatch": "Accent", "ids": ["{{#mark.id}}"] } },
+    { "as": "name", "cmd": "frame.create", "params": { "rect": [24, 30, 190, 60], "content": "text", "text": "{{name}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#name.id}}", "point": [40, 44] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.serif}}", "size": 13, "tracking": 20, "fill": "Paper" } } },
+    { "as": "role", "cmd": "frame.create", "params": { "rect": [24, 62, 190, 78], "content": "text", "text": "{{role}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#role.id}}", "point": [40, 70] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.sans}}", "size": 7.5, "tracking": 80, "fill": "Accent" } } },
+    { "as": "rule", "cmd": "frame.create", "params": { "rect": [24, 88, 120, 89], "content": "graphic" } },
+    { "cmd": "object.fill", "params": { "swatch": "Accent", "ids": ["{{#rule.id}}"] } },
+    { "as": "contact", "cmd": "frame.create", "params": { "rect": [24, 100, 180, 136], "content": "text", "text": "{{contact}}" } },
+    { "cmd": "text.selectStory", "params": { "frame": "{{#contact.id}}", "point": [40, 108] } },
+    { "cmd": "type.char", "params": { "attrs": { "fontFamily": "{{font.sans}}", "size": 7, "tracking": 40, "leading": { "kind": "points", "value": 11 }, "fill": "Paper" } } }
+  ]
+}
